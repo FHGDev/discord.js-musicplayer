@@ -1,0 +1,20 @@
+{
+    "name": "discord.js-musicplayer",
+    "version": "1.0.0",
+    "main": "./src/index.js",
+    "dependencies": {
+      "ytdl-core": "latest",
+      "node-fetch": "latest"
+    },
+    "peerDependencies": {
+      "discord.js": "latest",
+      "ffmpeg-binaries": "latest",
+      "ffmpeg": "latest"
+    },
+    
+    "author": "FHGDev",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/FHGDev/discord.js-musicplayer.git"
+    }
+}
