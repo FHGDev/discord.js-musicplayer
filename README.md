@@ -10,7 +10,7 @@ The goal of this project is to make it as easy as possible to play music in a Di
 `npm i -s discord.js-musicplayer`
 
 # Using
-You may be asking "How do I use it?". I'll solve that question.
+You may be asking ***"How do I use it?"***. I'll solve that question.
 
 ```js
 const musicplayer = require('discord.js-musicplayer')
