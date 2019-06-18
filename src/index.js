@@ -2,8 +2,9 @@ const ytdl = require('ytdl-core')
 const fetch = require('node-fetch')
 
 class MusicPlayer {
-  constructor(client) {
+  constructor(client, options = {}) {
     this.client = client
+    this.options = options
   }
   
   /**
@@ -25,6 +26,26 @@ class MusicPlayer {
 
             resolve(dispatcher)
         })
+    })
+  }
+  
+  /**
+  * Searches YouTube for a certain video
+  * @param {String} q Title of the video to search for
+  * @returns {Promise}
+  */
+  search(q) {
+    return new Promise((res, rej) => {
+      fetch(`https://www.googleapis.com/youtube/v3/search?part=id&type=video&q=${encodeURIComponent(q)}&key=${options.apikey}`, {method: "GET"})
+      .then(r => r.json())
+      .then(json => {
+        if (json.items) {
+          res(json.items[0].id.videoId)
+        } else {
+          rej("Not found")
+        }
+      })
+      .catch(rej)
     })
   }
 }
