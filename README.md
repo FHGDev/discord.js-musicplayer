@@ -1,5 +1,6 @@
 # discord.js-musicplayer
 A new and easier way to play music with discord.js
+[![NPM](https://nodei.co/npm/discord.js-musicplayer.png)](https://nodei.co/npm/discord.js-musicplayer/)
 
 # Intro
 I created discord.js-musicplayer because I remember how confusing playing music with discord.js was when I first started.
